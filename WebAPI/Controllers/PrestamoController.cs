@@ -26,5 +26,11 @@ namespace WebAPI.Controllers
         {
             return PrestamosBLL.Buscar(id);
         }
+
+        [HttpPost]
+        public void Post([FromBody] Prestamo prestamo)
+        {
+            bool paso = PrestamosBLL.Guardar(prestamo);
+        }
     }
 }
