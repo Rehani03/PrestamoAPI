@@ -32,5 +32,11 @@ namespace WebAPI.Controllers
         {
             bool paso = PrestamosBLL.Guardar(prestamo);
         }
+
+        [HttpDelete("{id}")]
+        public bool Delete(int id)
+        {
+            return PrestamosBLL.Eliminar(id);
+        }
     }
 }
